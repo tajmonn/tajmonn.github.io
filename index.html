@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <title>Portfolio - Retro Desktop</title>
 
     <!-- CSS POTEM -->
@@ -15,7 +17,7 @@
 
         <!-- ICONS / FOLDERS -->
         <div class="icon folder" data-window="profile" style="top:40px; left:40px;">
-            <img src="icons/folder.png" alt="Folder icon" />
+            <img src="icons/text-file.png" alt="Folder icon" />
             <span>o_mnie
             </span>
         </div>
@@ -46,22 +48,10 @@
                 <button class="close">X</button>
             </div>
         </div>
-        <div class="window-content">
-            <h2>Cześć!</h2>
-            <br/>
-            <p>Nazywam się Tymon, mam 24 lata i pochodzę z Wrocławia. Ukończyłem studia na kierunku inżynieria systemów, co dało mi solidne podstawy w rozumieniu zarówno oprogramowania, jak i sprzętu.</p>
-            <br/>
-            <p>Najbardziej interesuje mnie Python, w którym lubię tworzyć różne programy i eksperymentować z automatyką oraz małymi projektami elektronicznymi. Ostatnio sporo czasu poświęcam pracy z programowalnymi obwodami, takimi jak ESP32 i inne mikrokontrolery, ucząc się nowych rzeczy i sprawdzając, jak można je wykorzystać w praktyce.</p>
-            <br/>
-            <p>Lubię też bawić się Linuksem – odkrywać jego możliwości, konfigurować systemy i testować różne dystrybucje, co daje mi dużo frajdy i pozwala lepiej rozumieć, jak działają systemy operacyjne „od środka”.</p>
-            <br/>
-            <p> Poza komputerem staram się spędzać czas aktywnie – jeżdżę na rolkach i próbuję różnych rzeczy praktycznie, zarówno w kontekście DIY, jak i codziennych drobnych eksperymentów.</p>
-            <br/>
-            <p>To miejsce jest dla mnie sposobem, żeby dzielić się tym, czym się zajmuję i co mnie interesuje. Choć na razie mam tu tylko kilka projektów, chcę pokazać, jak podchodzę do nauki i pracy nad nowymi rozwiązaniami, oraz dokumentować swoje doświadczenia w tworzeniu zarówno oprogramowania, jak i elektroniki.</p>
-            <br/>
-        </div>
+        <div class="window-content" id="about"></div>
     </div>
-    <!-- WORK WINDOW -->
+
+    <!-- EXPERIENCE WINDOW -->
     <div class="window" id="window-work" data-name="work">
         <div class="title-bar">
             <span>C:\DOŚWIADCZENIE</span>
@@ -69,70 +59,53 @@
                 <button class="close">X</button>
             </div>
         </div>
+        
         <div class="window-content">
-            <h2>Moje doświadczenia</h2>
-            <br/>
-            <p><strong>Freelancer IT</strong></p>
-            <p><strong>Fundacja RiRi | Wrocław | Wrześ 2025 - obecnie</strong></p>
-            <ul>
-                <li>Zaprojektowanie i stworzenie strony internetowej (HTML, CSS, JS).</li>
-                <li>Zarządzenie sprzętem komputerowym.</li>
-                <li>Zaprojektowanie aplikacji webowej do zarządzania czasem pracy (Python, Streamlit).</li>
-                
-            </ul>
+            <div class="icon folder" data-window="experience-work" style="top:50px; left:10px;">
+                <img src="icons/text-file.png" alt="Work experience" />
+                <span>Doświadczenie_zawodowe.txt</span>
+            </div>
 
-            <hr/>
-            <p><strong>Freelancer IT</strong></p>
-            <p><strong>MMDent | Wrocław | Lip 2025 - obecnie</strong></p>
-            <ul>
-                <li>Administracja i modernizacja infrastruktury IT (aktualizacje systemów, wdrożenie nowego serwera, konfiguracja stacji roboczych).</li>
-                <li>Instalacja, konfiguracja i wsparcie użytkowników w obsłudze aplikacji biznesowych (w tym specjalistycznych aplikacji branżowych).</li>
-                <li>Samodzielne planowanie, wdrażanie i dokumentowanie zmian w systemach z uwzględnieniem bezpieczeństwa danych.</li>
-            </ul>
-
-            <hr/>
-            <p><strong>Wsparcie działu IT</strong></p>
-            <p><strong>OTTO Work Force | Bielany Wrocławskie</strong></p>
-            <p><strong>praca wakacyjna 2021 - 2024 (łącznie ponad rok doświadczenia)</strong></p>
-            <ul>
-                <li>Administracja i wsparcie aplikacji biznesowych oraz systemów IT (zarządzanie kontami użytkowników, monitorowanie infrastruktury, rozwiązywanie incydentów).</li>
-                <li>Automatyzacja procesów administracyjnych przy użyciu skryptów (np. Windows Batch, PowerShell).</li>
-                <li>Wsparcie działu IT (pierwsza linia wsparcia zdalnie i na miejscu). </li>
-                <li>Udział w projektach modernizacji i migracji systemów (CRM, serwery aplikacyjne, aktualizacje oprogramowania).</li>
-                <li>Tworzenie i dokumentowanie procedur eksploatacyjnych oraz rozwiązań wspierających użytkowników końcowych..</li>
-                <li>Stworzenie kiosków rekrutacyjnych z przestarzałego sprzętu, wdrożonych w różnych lokalizacjach.</li>
-                <li>Wsparcie w migracjach serwerów, systemów CRM i modernizacji infrastruktury IT.</li>
-                <li>Bliska współpraca z administratorami sieci, systemów i bezpieczeństwa w projektach wdrożeniowych oraz zespołem informatyków zajmujących się backendem i frontendem stron firmowych.</li>
-            </ul>
-            <hr/>
+            <div class="icon folder" data-window="experience-education" style="top:50px; left: 250px;">
+                <img src="icons/text-file.png" alt="Education experience" />
+                <span>Doświadczenie_edukacyjne.txt</span>
+            </div>
         </div>
-    </div>
+    </div> <!-- close window-work -->
+
     <!-- CONTACT WINDOW -->
-    <div class="window" id="window-contact" data-name="contact">
+    <div class="window" data-name="contact">
         <div class="title-bar">
             <span>C:\CONTACT</span>
             <div class="window-controls">
                 <button class="close">X</button>
             </div>
         </div>
-        <div class="window-content">
-            <h2>Contact Me</h2>
-            <p>This is the contact section of the portfolio.</p>
-        </div>
+        <div class="window-content" id="contact-content"></div>
     </div>
-    <!-- RESUME WINDOW -->
-    <div class="window" id="window-resume" data-name="resume">
+
+    <!-- EXPERIENCE WORK -->
+    <div class="window" id="window-work-experience" data-name="experience-work">
         <div class="title-bar">
-            <span>C:\RESUME</span>
+            <span>C:\DOŚWIADCZENIE\DOŚWIADCZENIE_ZAWODOWE.TXT</span>
             <div class="window-controls">
                 <button class="close">X</button>
             </div>
         </div>
-        <div class="window-content">
-            <h2>My Resume</h2>
-            <p>This is the resume section of the portfolio.</p>
-        </div>
+        <div class="window-content" id="experience-work"></div>
     </div>
+
+    <!-- EXPERIENCE EDU -->
+    <div class="window" id="window-education-experience" data-name="experience-education">
+        <div class="title-bar">
+            <span>C:\DOŚWIADCZENIE\DOŚWIADCZENIE_EDUKACYJNE.TXT</span>
+            <div class="window-controls">
+                <button class="close">X</button>
+            </div>
+        </div>
+        <div class="window-content" id="experience-education"></div>
+    </div>
+
 
     <!-- JS POTEM -->
     <script src="script.js"></script>

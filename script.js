@@ -126,4 +126,29 @@ document.addEventListener("keydown", e => {
     topWindow.style.display = "none";
 });
 
+/* ===============================
+    LOAD MARKDOWN CONTENT
+   =============================== */
+marked.setOptions({
+    breaks: true,
+    gfm: true
+});
 
+const markdownSections = [
+    { selector: '#about', file: 'markdown/about.md' },
+    { selector: '#experience-work', file: 'markdown/experience-work.md' },
+    { selector: '#experience-education', file: 'markdown/experience-education.md' },
+    // { selector: '#contact', file: 'markdown/contact.md' },
+];
+
+function loadMarkdown(section) {
+    fetch(section.file)
+        .then(response => response.text())
+        .then(md => {
+            const html = marked.parse(md);
+            document.querySelector(section.selector).innerHTML = html;
+        })
+        .catch(err => console.error(`Error loading ${section.file}:`, err));
+}
+
+markdownSections.forEach(loadMarkdown);

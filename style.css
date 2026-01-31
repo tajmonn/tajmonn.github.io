@@ -20,9 +20,12 @@
 * {
     margin: 0;
     /* background: var(--color-black); */
-    font-family: "IBM Plex Mono", monospace;
+    font-family: "JetBrains Mono", monospace;
     color: var(--color-text);
     overflow: hidden;
+    cursor:
+        url('cursor/cursor.cur'),
+        auto;
 }
 
 /* ============
@@ -47,6 +50,18 @@
     position: relative;
 }
 
+#desktop::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("icons/wave.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50vw auto;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
 /* ============
     ICONS
     ============ */
@@ -55,13 +70,19 @@
     position: absolute;
     width: 80 px;
     text-align: center;
-    cursor: pointer;
     user-select: none;
 }
 
+.icon,
+.icon * {
+    cursor: 
+        url("cursor/select.cur"),
+        pointer;
+}
+
 .icon img {
-    width: 48px;
-    height: 48px;
+    width: 64px;
+    height: 64px;
 }
 
 .icon span {
@@ -86,7 +107,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 520px;
-    height: 360px;
+    height: 400px;
     background: var(--color-window-bg);
     border: 3px solid var(--color-dark);
     box-shadow: 6px 6px 0 var(--color-dark);
@@ -105,8 +126,22 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 10px;
-    font-size: 14px;
-    cursor: grab;
+    font-size: 15px;
+    font-weight: bold;
+}
+.title-bar,
+.title-bar * {
+    cursor: 
+        url("cursor/grab.cur")
+        grab !important;
+    user-select: none;
+}
+.title-bar span {
+    margin-left: 6px;
+    pointer-events: none;
+}
+.title-text {
+    pointer-events: none;
 }
 
 .window-controls {
@@ -121,7 +156,9 @@
     background: var(--color-bg);
     color: var(--color-dark);
     font-weight: bold;
-    cursor: pointer;
+    cursor: 
+        url("cursor/select.cur"),
+        pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -138,6 +175,7 @@
    =============================== */
 
 .window-content {
+    box-sizing: border-box;
     height: calc(100% - 36px);
     padding: 14px;
     overflow-y: auto;
@@ -149,6 +187,7 @@
 .window-content h2,
 .window-content h3 {
     margin-top: 0;
+    margin-bottom: 10px;
 }
 .window-content hr {
     border: none;
@@ -167,6 +206,9 @@
     content: "• ";
     font-size: 1em;
     color: var(--color-dark);
+}
+.window-content p {
+    margin-bottom: 20px;
 }
 
 .project {
