@@ -1,0 +1,193 @@
+/* =============
+    Color Variables
+    ============= */
+
+:root {
+    --color-bg: #CDA47B;
+    --color-primary: #9F4125;
+    --color-dark: #382020;
+    --color-black: #0e0e0e;
+
+    --color-window-bg: #f4e8d8;
+    --color-text: #382020;
+    --color-muted: rgba(56, 32, 32, 0.6);
+}
+
+/* ============
+    BASE RESET
+   ============ */
+
+* {
+    margin: 0;
+    /* background: var(--color-black); */
+    font-family: "IBM Plex Mono", monospace;
+    color: var(--color-text);
+    overflow: hidden;
+}
+
+/* ============
+    DESKTOP
+    ============ */
+
+#desktop {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-bg);
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.05) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.05), 1px,
+            transparent 1px
+        );
+    background-size: 24px 24px;
+    position: relative;
+}
+
+/* ============
+    ICONS
+    ============ */
+
+.icon {
+    position: absolute;
+    width: 80 px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.icon img {
+    width: 48px;
+    height: 48px;
+}
+
+.icon span {
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+}
+
+.icon:hover span {
+    background: var(--color-primary);
+    color: var(--color-window-bg);
+    padding: 2px 4px;
+}
+
+/* ============
+    WINDOWS
+    ============ */
+
+.window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 520px;
+    height: 360px;
+    background: var(--color-window-bg);
+    border: 3px solid var(--color-dark);
+    box-shadow: 6px 6px 0 var(--color-dark);
+    display: none;
+}
+
+/* ============
+    WINDOW TITLE BAR
+    ============ */
+
+.title-bar {
+    height: 36px;
+    background: var(--color-primary);
+    color: var(--color-window-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-size: 14px;
+    cursor: grab;
+}
+
+.window-controls {
+    display: flex;
+    gap: 6px;
+}
+
+.window-controls button {
+    width: 18px; 
+    height: 18px;
+    border: 2px solid var(--color-dark);
+    background: var(--color-bg);
+    color: var(--color-dark);
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2px;
+}
+
+.window-controls button:hover {
+    background: var(--color-dark);
+    color: var(--color-window-bg);
+}
+
+/* ===============================
+    WINDOW CONTENT
+   =============================== */
+
+.window-content {
+    height: calc(100% - 36px);
+    padding: 14px;
+    overflow-y: auto;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.window-content h1,
+.window-content h2,
+.window-content h3 {
+    margin-top: 0;
+}
+.window-content hr {
+    border: none;
+    border-top: 2px solid var(--color-dark);
+    margin: 12px 0;
+}
+.window-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+.window-content li {
+    padding-left: -1em;
+}
+.window-content li::before {
+    content: "• ";
+    font-size: 1em;
+    color: var(--color-dark);
+}
+
+.project {
+    border: 2px dashed var(--color-dark);
+    padding: 10px;
+    margin-bottom: 12px;
+}
+
+/* ===============================
+    SCROLLBAR (WEBKIT)
+   =============================== */
+
+.window-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.window-content::-webkit-scrollbar-track {
+    background: var(--color-bg);
+}
+
+.window-content::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border: 2px solid var(--color-dark);
+}
