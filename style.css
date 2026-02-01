@@ -18,15 +18,15 @@
    ============ */
 
 @font-face {
-    font-family: "Fira Code Regular";
-    src: url("fonts/FiraMonoNerdFont-Regular.otf") format("opentype");
+    font-family: "Fira Mono Regular";
+    src: url("fonts/FiraMonoNerdFont-Regular.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
 }
 
 * {
     margin: 0;
-    font-family: "Fira Code Regular", monospace;
+    font-family: "Fira Mono Regular", monospace;
     /* background: var(--color-black); */
     color: var(--color-text);
     overflow: hidden;
@@ -170,7 +170,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 2px;
+    /* padding-bottom: 2px; */
 }
 
 .window-controls button:hover {
