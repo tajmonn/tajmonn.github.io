@@ -17,10 +17,17 @@
     BASE RESET
    ============ */
 
+@font-face {
+    font-family: "Fira Code Regular";
+    src: url("fonts/FiraMonoNerdFont-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
+    font-family: "Fira Code Regular", monospace;
     /* background: var(--color-black); */
-    font-family: "JetBrains Mono", monospace;
     color: var(--color-text);
     overflow: hidden;
     cursor:
@@ -89,6 +96,7 @@
     display: block;
     margin-top: 6px;
     font-size: 13px;
+    padding: 2px 4px;
 }
 
 .icon:hover span {
@@ -186,7 +194,7 @@
 .window-content h1,
 .window-content h2,
 .window-content h3 {
-    margin-top: 0;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 .window-content hr {
@@ -210,12 +218,14 @@
 .window-content p {
     margin-bottom: 20px;
 }
-
-.project {
-    border: 2px dashed var(--color-dark);
-    padding: 10px;
-    margin-bottom: 12px;
+.window-content a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    cursor: 
+        url("cursor/select.cur"),
+        pointer;
 }
+
 
 /* ===============================
     SCROLLBAR (WEBKIT)

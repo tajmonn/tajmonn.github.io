@@ -129,16 +129,30 @@ document.addEventListener("keydown", e => {
 /* ===============================
     LOAD MARKDOWN CONTENT
    =============================== */
+const renderer = new marked.Renderer();
+
+renderer.link = function(token) {
+  const href = token.href || "#";
+  const title = token.title || "";
+  const text = token.text || href;
+
+  return `<a href="${href}" target="_blank" rel="noopener noreferrer" title="${title}">${text}</a>`;
+};
+
 marked.setOptions({
-    breaks: true,
-    gfm: true
+  renderer,
+  gfm: true,
+  breaks: true
 });
+
+
 
 const markdownSections = [
     { selector: '#about', file: 'markdown/about.md' },
     { selector: '#experience-work', file: 'markdown/experience-work.md' },
     { selector: '#experience-education', file: 'markdown/experience-education.md' },
-    // { selector: '#contact', file: 'markdown/contact.md' },
+    { selector: '#contact', file: 'markdown/contact.md' },
+    { selector: '#project-website-riri', file: 'markdown/website-riri.md' }
 ];
 
 function loadMarkdown(section) {

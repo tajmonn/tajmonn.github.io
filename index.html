@@ -16,25 +16,25 @@
     <div id="desktop">
 
         <!-- ICONS / FOLDERS -->
-        <div class="icon folder" data-window="profile" style="top:40px; left:40px;">
-            <img src="icons/text-file.png" alt="Folder icon" />
+        <div class="icon folder" data-window="profile" style="top:5vh; left:5vw;">
+            <img src="icons/text-file.png" alt="Text file icon" />
             <span>o_mnie
             </span>
         </div>
 
-        <div class="icon folder" data-window="work" style="top:140px; left:40px;">
+        <div class="icon folder" data-window="work" style="top:15vh; left:5vw;">
             <img src="icons/folder.png" alt="Folder icon" />
             <span>doświadczenie</span>
         </div>
 
-        <div class="icon folder" data-window="contact" style="top:240px; left:40px;">
-            <img src="icons/folder.png" alt="Folder icon" />
-            <span>contact</span>
+        <div class="icon folder" data-window="contact" style="top:25vh; left:5vw;">
+            <img src="icons/text-file.png" alt="Text file icon" />
+            <span>kontakt</span>
         </div>
 
-        <div class="icon folder" data-window="resume" style="top:40px; left:240px;">
+        <div class="icon folder" data-window="projects" style="top:5vh; left:25vw;">
             <img src="icons/folder.png" alt="Folder icon" />
-            <span>resume</span>
+            <span>projekty</span>
         </div>
     </div>
 
@@ -71,20 +71,9 @@
                 <span>Doświadczenie_edukacyjne.txt</span>
             </div>
         </div>
-    </div> <!-- close window-work -->
-
-    <!-- CONTACT WINDOW -->
-    <div class="window" data-name="contact">
-        <div class="title-bar">
-            <span>C:\CONTACT</span>
-            <div class="window-controls">
-                <button class="close">X</button>
-            </div>
-        </div>
-        <div class="window-content" id="contact-content"></div>
     </div>
 
-    <!-- EXPERIENCE WORK -->
+        <!-- EXPERIENCE WORK -->
     <div class="window" id="window-work-experience" data-name="experience-work">
         <div class="title-bar">
             <span>C:\DOŚWIADCZENIE\DOŚWIADCZENIE_ZAWODOWE.TXT</span>
@@ -105,6 +94,47 @@
         </div>
         <div class="window-content" id="experience-education"></div>
     </div>
+
+    <!-- CONTACT WINDOW -->
+    <div class="window" data-name="contact" >
+        <div class="title-bar">
+            <span>C:\KONTAKT.TXT</span>
+            <div class="window-controls">
+                <button class="close">X</button>
+            </div>
+        </div>
+        <div class="window-content" id="contact"></div>
+    </div>
+
+    <!-- PROJECTS WINDOW -->
+    <div class="window" id="window-projects" data-name="projects">
+        <div class="title-bar">
+            <span>C:\PROJEKTY</span>
+            <div class="window-controls">
+                <button class="close">X</button>
+            </div>
+        </div>
+        
+        <div class="window-content">
+            <div class="icon folder" data-window="project-website-riri" style="top:50px; left:10px;">
+                <img src="icons/text-file.png" alt="Project website RiRi" />
+                <span>Strona_RiRi.txt</span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- PROJECT RIRI WEBSITE-->
+    <div class="window" id="window-project-website-riri" data-name="project-website-riri">
+        <div class="title-bar">
+            <span>C:\STRONA_RIRI.TXT</span>
+            <div class="window-controls">
+                <button class="close">X</button>
+            </div>
+        </div>
+        <div class="window-content" id="project-website-riri"></div>
+    </div>
+    
 
 
     <!-- JS POTEM -->
