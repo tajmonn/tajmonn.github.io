@@ -27,7 +27,6 @@
 * {
     margin: 0;
     font-family: "Fira Mono Regular", monospace;
-    /* background: var(--color-black); */
     color: var(--color-text);
     overflow: hidden;
     cursor:
@@ -105,6 +104,46 @@
     padding: 2px 4px;
 }
 
+/* ===============================
+    ICON POSITIONS
+   =============================== */
+.profile {
+    top: 10vh;
+    left: 50vw;
+}
+
+.contact {
+    top:69vh; 
+    left:10vw;
+}
+
+.folder-experience {
+    top:30vh; 
+    left:84vw;
+}
+
+.folder-projects {
+    top:5vh; 
+    left:8vw;
+}
+
+/* EXPERIENCE FOLDER */
+
+.experience-work {
+    top:15%; 
+    left:5%;
+}
+.experience-education {
+    top:15%; 
+    left:50%;
+}
+
+/* PROJECTS FOLDER */
+
+.project-riri {
+    top:15%; 
+    left:5%;
+}
 /* ============
     WINDOWS
     ============ */
@@ -140,8 +179,8 @@
 .title-bar,
 .title-bar * {
     cursor: 
-        url("cursor/grab.cur")
-        grab !important;
+        url("cursor/grab.cur"),
+        grab;
     user-select: none;
 }
 .title-bar span {
