@@ -42,7 +42,7 @@
 
     <!-- WINDOWS-->
     <!-- PROFILE WINDOW -->
-    <div class="window" id="window-profile" data-name="profile">
+    <div class="window window-text" id="window-profile" data-name="profile">
         <div class="title-bar">
             <span>C:\O_MNIE</span>
             <div class="window-controls">
@@ -53,7 +53,7 @@
     </div>
 
     <!-- EXPERIENCE WINDOW -->
-    <div class="window" id="window-work" data-name="work">
+    <div class="window window-folder" id="window-work" data-name="work">
         <div class="title-bar">
             <span>C:\DOŚWIADCZENIE</span>
             <div class="window-controls">
@@ -75,7 +75,7 @@
     </div>
 
         <!-- EXPERIENCE WORK -->
-    <div class="window" id="window-work-experience" data-name="experience-work">
+    <div class="window window-text" id="window-work-experience" data-name="experience-work">
         <div class="title-bar">
             <span>C:\DOŚWIADCZENIE\DOŚWIADCZENIE_ZAWODOWE.TXT</span>
             <div class="window-controls">
@@ -86,7 +86,7 @@
     </div>
 
     <!-- EXPERIENCE EDU -->
-    <div class="window" id="window-education-experience" data-name="experience-education">
+    <div class="window window-text" id="window-education-experience" data-name="experience-education">
         <div class="title-bar">
             <span>C:\DOŚWIADCZENIE\DOŚWIADCZENIE_EDUKACYJNE.TXT</span>
             <div class="window-controls">
@@ -97,7 +97,7 @@
     </div>
 
     <!-- CONTACT WINDOW -->
-    <div class="window" data-name="contact" >
+    <div class="window window-text" data-name="contact" >
         <div class="title-bar">
             <span>C:\KONTAKT.TXT</span>
             <div class="window-controls">
@@ -108,9 +108,27 @@
     </div>
 
     <!-- PROJECTS WINDOW -->
-    <div class="window" id="window-projects" data-name="projects">
+    <div class="window window-folder" id="window-projects" data-name="projects">
         <div class="title-bar">
             <span>C:\PROJEKTY</span>
+            <div class="window-controls">
+                <button class="close">X</button>
+            </div>
+        </div>
+        
+        <div class="window-content">
+            <div class="icon project-riri-folder" data-window="project-website-riri-folder">
+                <img src="icons/folder.png" alt="Project website RiRi" />
+                <span>Strona_RiRi</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- RIRI PROJECT WINDOW -->
+    <div class="window window-folder" id="window-project-website-riri-folder" data-name="project-website-riri-folder">
+        <div class="title-bar">
+            <span>C:\PROJEKTY\STRONA_RIRI</span>
             <div class="window-controls">
                 <button class="close">X</button>
             </div>
@@ -121,20 +139,35 @@
                 <img src="icons/text-file.png" alt="Project website RiRi" />
                 <span>Strona_RiRi.txt</span>
             </div>
-
+            <div class="icon riri-screenshot" data-window="riri-website-screenshot">
+                <img src="icons/image.png" alt="Screenshot of RiRi website" />
+                <span>Strona_Screenshot.jpg</span>
+            </div>
         </div>
+
     </div>
 
     <!-- PROJECT RIRI WEBSITE-->
-    <div class="window" id="window-project-website-riri" data-name="project-website-riri">
+    <div class="window window-text" id="window-project-website-riri" data-name="project-website-riri">
         <div class="title-bar">
-            <span>C:\STRONA_RIRI.TXT</span>
+            <span>C:\PROJEKTY\STRONA_RIRI\STRONA_RIRI.TXT</span>
             <div class="window-controls">
                 <button class="close">X</button>
             </div>
         </div>
         <div class="window-content" id="project-website-riri"></div>
     </div>
+    <!-- RIRI WEBSITE SCREENSHOT -->
+    <div class="window window-image" id="window-riri-website-screenshot" data-name="riri-website-screenshot">
+        <div class="title-bar">
+            <span>C:\PROJEKTY\STRONA_RIRI\STRONA_SCREENSHOT.JPG</span>
+            <div class="window-controls">
+                <button class="close">X</button>
+            </div>
+        </div>
+        <div class="window-content">
+            <img src="images/riri-website.webp" alt="RiRi Website Screenshot" />
+        </div>
     
 
 
