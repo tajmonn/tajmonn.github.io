@@ -1,13 +1,11 @@
 ### **Cześć!**
 
+Nazywam się **Tymon**, mam 24 lata i pochodzę z Wrocławia. Ukończyłem studia na kierunku **inżynieria systemów**, co dało mi solidne podstawy w rozumieniu zarówno oprogramowania, jak i sprzętu oraz ich wzajemnych zależności w różnych obszarach informatyki.  
 
+Najbliższym mi językiem programowania jest **Python**, w którym tworzę aplikacje, narzędzia automatyzujące oraz eksperymentalne projekty łączące software z elektroniką. Interesuje mnie praktyczne zastosowanie technologii — od aplikacji webowych po rozwiązania oparte na mikrokontrolerach, takich jak **ESP32**.  
 
-Nazywam się **Tymon**, mam 24 lata i pochodzę z Wrocławia. Ukończyłem studia na kierunku **inżynieria systemów**, co dało mi solidne podstawy w rozumieniu zarówno oprogramowania, jak i sprzętu w wielu dziedzinach informatyki. 
+Dużo czasu poświęcam również pracy z **Linuksem** — konfiguracji systemów, testowaniu dystrybucji oraz poznawaniu mechanizmów działania systemów operacyjnych „od środka”. Dzięki temu rozwijam umiejętności administracyjne i lepiej rozumiem infrastrukturę, na której działa oprogramowanie.  
 
-Pod względem programowania, najbliższym mi językiem jest **Python**, w którym lubię tworzyć różne programy i eksperymentować z automatyką oraz małymi projektami elektronicznymi. Ostatnio sporo czasu poświęcam pracy z programowalnymi obwodami, takimi jak ESP32 i inne mikrokontrolery, ucząc się nowych rzeczy i sprawdzając, jak można je wykorzystać w praktyce. 
+Poza pracą przy komputerze stawiam na aktywność fizyczną — jeżdżę na rolkach i realizuję projekty DIY, które pozwalają mi rozwijać umiejętność praktycznego rozwiązywania problemów.  
 
-Lubię też bawić się **Linuksem** – odkrywać jego możliwości, konfigurować systemy i testować różne dystrybucje, co daje mi dużo frajdy i pozwala lepiej rozumieć, jak działają systemy operacyjne „od środka”. 
-
-Poza komputerem staram się spędzać czas aktywnie – jeżdżę na *rolkach* i próbuję różnych rzeczy praktycznie, zarówno w kontekście DIY, jak i codziennych drobnych eksperymentów. 
-
-To miejsce jest dla mnie sposobem, żeby dzielić się tym, czym się zajmuję i co mnie interesuje. Choć na razie mam tu tylko kilka projektów, chcę pokazać, jak podchodzę do nauki i pracy nad nowymi rozwiązaniami, oraz dokumentować swoje doświadczenia w tworzeniu zarówno oprogramowania, jak i elektroniki.
+To portfolio jest miejscem, w którym dokumentuję swoje projekty i rozwój. Pokazuje nie tylko gotowe rozwiązania, ale także sposób, w jaki podchodzę do nauki, eksperymentów i budowania nowych systemów.

@@ -29,5 +29,5 @@ Szczególną rolę w działalności Fundacji RiRi odgrywają zajęcia **WWR (Wcz
 Celem strony Fundacji RiRi było stworznie bezpiecznej i przyjaznej przestrzeni online, która wspiera komunikację poradni z pacjentami oraz ułatwia dostęp do informacji.  
 
 ### Wykonanie
-Strona jest dostępna pod adresem: [riri.org.pl](https://riri.org.pl)  
+Strona jest dostępna pod adresem: [riri.org.pl ](https://riri.org.pl)  
 zaś kod źródłowy można znaleźć na: [githubie ](https://github.com/Fundacja-RiRi/Fundacja-RiRi.github.io)

@@ -9,37 +9,66 @@ let zIndexCounter = 10;
    =============================== */
 
 document.querySelectorAll(".icon").forEach(icon => {
-    icon.addEventListener("click", () => {
+    icon.addEventListener("click", (event) => {
         const name = icon.dataset.window;
         const windowEl = document.querySelector(`.window[data-name="${name}"]`);
-
         if (!windowEl) return;
 
+        const isAlreadyOpen = windowEl.style.display === "block";
+
+        // Show the window and bring to front
         windowEl.style.display = "block";
         bringToFront(windowEl);
 
-        // ===== CHECK IF WINDOW IS FULLY VISIBLE =====
-        const rect = windowEl.getBoundingClientRect();
         const viewportWidth = window.innerWidth;
         const viewportHeight = window.innerHeight;
+        const rect = windowEl.getBoundingClientRect();
 
-        const isFullyVisible =
-            rect.left >= 0 &&
-            rect.top >= 0 &&
-            rect.right <= viewportWidth &&
-            rect.bottom <= viewportHeight;
+        if (!isAlreadyOpen) {
+            // Window is opening for the first time → position near cursor
+            let newLeft = event.clientX - 10;
+            let newTop = event.clientY + 30;
 
-        // If window is not fully visible, center it
-        if (!isFullyVisible) {
-            let newLeft = (viewportWidth - rect.width) / 2;
-            let newTop = (viewportHeight - rect.height) / 2;
+            // Check if fully visible
+            const fits =
+                newLeft >= 0 &&
+                newTop >= 0 &&
+                newLeft + rect.width <= viewportWidth &&
+                newTop + rect.height <= viewportHeight;
+
+            if (!fits) {
+                // If not fully visible → center
+                newLeft = (viewportWidth - rect.width) / 2;
+                newTop = (viewportHeight - rect.height) / 2;
+            }
 
             windowEl.style.left = `${newLeft}px`;
             windowEl.style.top = `${newTop}px`;
             windowEl.style.transform = "none";
+
+        } else {
+            // Window already open → just check if fully visible
+            const isFullyVisible =
+                rect.left >= 0 &&
+                rect.top >= 0 &&
+                rect.right <= viewportWidth &&
+                rect.bottom <= viewportHeight;
+
+            if (!isFullyVisible) {
+                const newLeft = (viewportWidth - rect.width) / 2;
+                const newTop = (viewportHeight - rect.height) / 2;
+
+                windowEl.style.left = `${newLeft}px`;
+                windowEl.style.top = `${newTop}px`;
+                windowEl.style.transform = "none";
+            }
         }
     });
 });
+
+
+
+
 
 
 /* ===============================

@@ -18,15 +18,15 @@
    ============ */
 
 @font-face {
-    font-family: "Fira Mono Regular";
-    src: url("fonts/FiraMonoNerdFont-Regular.woff2") format("woff2");
+    font-family: "Departure Mono Nerd Font";
+    src: url("fonts/DepartureMonoNerdFont-Regular.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
 }
 
 * {
     margin: 0;
-    font-family: "Fira Mono Regular", monospace;
+    font-family: "Departure Mono Nerd Font", monospace;
     color: var(--color-text);
     overflow: hidden;
     cursor:
