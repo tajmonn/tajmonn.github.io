@@ -181,7 +181,8 @@ const markdownSections = [
     { selector: '#experience-work', file: 'markdown/experience-work.md' },
     { selector: '#experience-education', file: 'markdown/experience-education.md' },
     { selector: '#contact', file: 'markdown/contact.md' },
-    { selector: '#project-website-riri', file: 'markdown/website-riri.md' }
+    { selector: '#project-website-riri', file: 'markdown/website-riri.md' },
+    { selector: '#project-portfolio', file: 'markdown/portfolio.md' }
 ];
 
 function loadMarkdown(section) {
