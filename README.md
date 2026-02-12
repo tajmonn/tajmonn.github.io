@@ -53,7 +53,7 @@ The site is designed to be lightweight, fast, and minimalistic.
 
 ## 🙏 Acknowledgements  
 
-[𝕎𝕚𝕟𝕕𝕠𝕨𝕤 𝟡𝟝 ~𝓒𝓪𝓵𝓶𝓲𝓷𝓰~ Icon Pack](https://aconfuseddragon.itch.io/windows-95-calming) – created by aconfuseddragon
-Licensed under CC BY 4.0.
+[𝕎𝕚𝕟𝕕𝕠𝕨𝕤 𝟡𝟝 ~𝓒𝓪𝓵𝓶𝓲𝓷𝓰~ Icon Pack](https://aconfuseddragon.itch.io/windows-95-calming) – created by aconfuseddragon  
+Licensed under CC BY 4.0.  
 Icons were modified and adapted for this project.  
 
