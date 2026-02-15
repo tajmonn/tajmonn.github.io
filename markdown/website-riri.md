@@ -15,18 +15,18 @@ Szczególną rolę w działalności Fundacji RiRi odgrywają zajęcia **WWR (Wcz
 - prezentacja oferty poradni i zakresu wsparcia
 - sekcje informacyjne dla rodziców i opiekunów
 - dane kontaktowe i lokalizacja
-- czytelna nawigacja ułatwiająca szybklie znalezienie informacji
-- podstrona z funkcją postów, służących jako aktualności  
+- czytelna nawigacja ułatwiająca szybkie znalezienie informacji
+- podstrona z funkcją postów, służących jako aktualności 
 
 ### Technologie
 - **HTML5**
 - **CSS3**
 - **JavaScript**
-- nowoczesna typogrfia webowa
+- nowoczesna typografia webowa
 - zoptymalizowane grafiki  
 
 ### Cel projektu 
-Celem strony Fundacji RiRi było stworznie bezpiecznej i przyjaznej przestrzeni online, która wspiera komunikację poradni z pacjentami oraz ułatwia dostęp do informacji.  
+Celem strony Fundacji RiRi było stworzenie bezpiecznej i przyjaznej przestrzeni online, która wspiera komunikację poradni z pacjentami oraz ułatwia dostęp do informacji.  
 
 ### Wykonanie
 Strona jest dostępna pod adresem: [riri.org.pl ](https://riri.org.pl)  
