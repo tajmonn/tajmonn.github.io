@@ -1,6 +1,6 @@
 ### **Cześć!**
 
-Nazywam się **Tymon**, mam 24 lata i pochodzę z Wrocławia. Ukończyłem studia na kierunku **inżynieria systemów**, co dało mi solidne podstawy w rozumieniu zarówno oprogramowania, jak i sprzętu oraz ich wzajemnych zależności w różnych obszarach informatyki.  
+Nazywam się **Tymon**, mam {{AGE}} i pochodzę z Wrocławia. Ukończyłem studia na kierunku **inżynieria systemów**, co dało mi solidne podstawy w rozumieniu zarówno oprogramowania, jak i sprzętu oraz ich wzajemnych zależności w różnych obszarach informatyki.  
 
 Najbliższym mi językiem programowania jest **Python**, w którym tworzę aplikacje, narzędzia automatyzujące oraz eksperymentalne projekty łączące software z elektroniką. Interesuje mnie praktyczne zastosowanie technologii — od aplikacji webowych po rozwiązania oparte na mikrokontrolerach, takich jak **ESP32**.  
 

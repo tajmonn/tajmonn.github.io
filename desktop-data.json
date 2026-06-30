@@ -1,0 +1,79 @@
+[
+    {
+        "type": "file",
+        "name": "o_mnie.txt",
+        "markdown": "markdown/about.md",
+        "id": "profile",
+        "contentId": "about"
+    },
+    {
+        "type": "folder",
+        "name": "doświadczenie",
+        "id": "work",
+        "children": [
+            {
+                "type": "file",
+                "name": "Doświadczenie_zawodowe.txt",
+                "markdown": "markdown/experience-work.md",
+                "id": "experience-work"
+            },
+            {
+                "type": "file",
+                "name": "Doświadczenie_edukacyjne.txt",
+                "markdown": "markdown/experience-education.md",
+                "id": "experience-education"
+            }
+        ]
+    },
+    {
+        "type": "file",
+        "name": "kontakt.txt",
+        "markdown": "markdown/contact.md",
+        "id": "contact"
+    },
+    {
+        "type": "folder",
+        "name": "projekty",
+        "id": "projects",
+        "children": [
+            {
+                "type": "folder",
+                "name": "Strona_RiRi",
+                "id": "project-website-riri-folder",
+                "children": [
+                    {
+                        "type": "file",
+                        "name": "Strona_RiRi.txt",
+                        "markdown": "markdown/website-riri.md",
+                        "id": "project-website-riri"
+                    },
+                    {
+                        "type": "image",
+                        "name": "Strona_Screenshot.jpg",
+                        "src": "images/riri-website.webp",
+                        "id": "riri-website-screenshot"
+                    }
+                ]
+            },
+            {
+                "type": "folder",
+                "name": "Strona_Portfolio",
+                "id": "project-portfolio-folder",
+                "children": [
+                    {
+                        "type": "file",
+                        "name": "Strona_Portfolio.txt",
+                        "markdown": "markdown/portfolio.md",
+                        "id": "project-portfolio"
+                    },
+                    {
+                        "type": "image",
+                        "name": "Portfolio_Screenshot.jpg",
+                        "src": "images/portfolio.webp",
+                        "id": "portfolio-screenshot"
+                    }
+                ]
+            }
+        ]
+    }
+]
