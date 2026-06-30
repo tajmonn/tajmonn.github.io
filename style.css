@@ -89,7 +89,7 @@ html, body {
 
 .icon {
     /* position: absolute; */
-    width: 80 px;
+    width: 80px;
     text-align: center;
     user-select: none;
 }
@@ -250,6 +250,11 @@ html, body {
 .title-bar span {
     margin-left: 6px;
     pointer-events: none;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .title-text {
     pointer-events: none;
@@ -258,6 +263,7 @@ html, body {
 .window-controls {
     display: flex;
     gap: 6px;
+    flex-shrink: 0;
 }
 
 .window-controls button {
@@ -300,3 +306,48 @@ html, body {
     background: var(--color-primary);
     border: 2px solid var(--color-dark);
 }
+
+/* ===============================
+    MOBILE / SMALL SCREEN WINDOW SIZING
+   =============================== */
+
+@media (max-width: 768px) {
+    .window-text,
+    .window-folder {
+        width: 90vw;
+        height: 75vh;
+        max-width: none;
+    }
+
+    .window-image {
+        width: 90vw;
+        max-width: none;
+        height: 70vh;
+        max-height: none;
+    }
+
+    .window-folder .window-content {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+
+    .title-bar {
+        font-size: 13px;
+        padding: 0 8px;
+    }
+}
+
+@media (max-width: 420px) {
+    .window-text,
+    .window-folder,
+    .window-image {
+        width: 94vw;
+        height: 82vh;
+    }
+
+    .window-text .window-content {
+        font-size: 13px;
+        padding: 10px;
+    }
+}
+
+/* TODO - SIZES FOR THE ICONS, NAMES, PATHS ON MOBILES */
