@@ -63,8 +63,8 @@ html, body {
 
     /* DODANE DO GRID */
     display: grid;
-    grid-template-columns: repeat(auto-fill, 150px); /* szerokość kolumny */
-    grid-auto-rows: 100px; /* wysokość "komórki" */
+    grid-template-columns: repeat(auto-fill, 120px); /* szerokość kolumny */
+    grid-auto-rows: minmax(100px, auto); /* wysokość "komórki" dopasowana do zawartości */
     gap: 100px; /* odstępy między ikonami */
     justify-content: start; /* wyrównanie do lewej */
     align-content: start;  /* wyrównanie do góry */
@@ -89,9 +89,10 @@ html, body {
 
 .icon {
     /* position: absolute; */
-    width: 80px;
+    width: 160px;
     text-align: center;
     user-select: none;
+    overflow: visible;
 }
 
 .icon,
@@ -111,6 +112,9 @@ html, body {
     margin-top: 6px;
     font-size: 13px;
     padding: 2px 4px;
+    white-space: normal;
+    word-break: break-word;
+    overflow: visible;
 }
 
 .icon:hover span {
@@ -191,10 +195,9 @@ html, body {
 
 /* WINDOW IMAGE */
 .window-image {
-    width: 80vw;
-    max-width: 900px;
-    height: 60vh;
-    max-height: 600px;
+    width: auto;
+    max-width: min(900px, 90vw);
+    height: auto;
     padding: 0;
 }
 
@@ -202,13 +205,14 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: calc(100% - 36px); */
+    height: auto;
     padding: 0;
 }
 
 .window-image img {
-    max-width: 100%;
-    max-height: 100%;
+    display: block;
+    max-width: min(860px, 86vw);
+    max-height: 70vh;
     object-fit: contain;
 }
 
@@ -220,9 +224,13 @@ html, body {
 
 .window-folder .window-content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 250px);
-    gap: 10px;
-    padding: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+    grid-auto-rows: minmax(110px, auto);
+    gap: 60px;
+    padding: 32px 20px 200px;
+    align-content: center;
+    justify-items: center;
+    overflow-y: auto;
 }
 
 /* ============
@@ -308,46 +316,101 @@ html, body {
 }
 
 /* ===============================
-    MOBILE / SMALL SCREEN WINDOW SIZING
+    MOBILE / SMALL SCREEN
    =============================== */
 
 @media (max-width: 768px) {
+
+    /* --- Desktop icon grid --- */
+    #desktop {
+        grid-template-columns: repeat(auto-fill, 80px);
+        grid-auto-rows: auto;
+        gap: 20px;
+        padding: 16px;
+        align-content: start;
+    }
+
+    /* --- Icons --- */
+    .icon {
+        width: 80px;
+    }
+
+    .icon img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .icon span {
+        font-size: 11px;
+        margin-top: 4px;
+    }
+
+    /* --- Title bar: shrink font, keep close button always visible --- */
+    .title-bar {
+        font-size: 12px;
+        padding: 0 8px;
+        gap: 6px;
+    }
+
+    /* --- Text / folder windows --- */
     .window-text,
     .window-folder {
-        width: 90vw;
-        height: 75vh;
+        width: 40vw;
+        height: 30vh;
         max-width: none;
-    }
-
-    .window-image {
-        width: 90vw;
-        max-width: none;
-        height: 70vh;
-        max-height: none;
-    }
-
-    .window-folder .window-content {
-        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-    }
-
-    .title-bar {
-        font-size: 13px;
-        padding: 0 8px;
-    }
-}
-
-@media (max-width: 420px) {
-    .window-text,
-    .window-folder,
-    .window-image {
-        width: 94vw;
-        height: 82vh;
     }
 
     .window-text .window-content {
         font-size: 13px;
         padding: 10px;
     }
+
+    /* --- Folder icon grid inside window --- */
+    .window-folder .window-content {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 8px;
+        padding: 10px;
+    }
+
+    /* --- Image window: no fixed height, shrinks to image --- */
+    .window-image {
+        max-width: 92vw;
+    }
+
+    .window-image img {
+        max-width: 84vw;
+        max-height: 60vh;
+    }
 }
 
-/* TODO - SIZES FOR THE ICONS, NAMES, PATHS ON MOBILES */
+@media (max-width: 420px) {
+    #desktop {
+        grid-template-columns: repeat(auto-fill, 70px);
+        gap: 14px;
+        padding: 12px;
+    }
+
+    .icon {
+        width: 70px;
+    }
+
+    .icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .window-text,
+    .window-folder {
+        width: 94vw;
+        height: 30vh;
+    }
+
+    .window-image {
+        max-width: 94vw;
+    }
+
+    .window-image img {
+        max-width: 88vw;
+        max-height: 55vh;
+    }
+}
