@@ -9,7 +9,7 @@
     {
         "type": "folder",
         "name": "doświadczenie",
-        "id": "work",
+        "id": "experience",
         "children": [
             {
                 "type": "file",
@@ -25,10 +25,17 @@
             },
             {
                 "type": "file",
-                "name": "Doświadczenie edukacyjne.txt",
-                "markdown": "markdown/experience-education.md",
-                "id": "experience-education-test"
+                "name": "Kompetencje.txt",
+                "markdown": "markdown/skills-long.md",
+                "id": "skills-long"
+            },
+            {
+                "type": "file",
+                "name": "Technologie.txt",
+                "markdown": "markdown/skills-short.md",
+                "id": "skills-short"
             }
+
         ]
     },
     {
