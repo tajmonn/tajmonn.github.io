@@ -86,6 +86,12 @@
                         "id": "portfolio-screenshot"
                     }
                 ]
+            },
+            {
+                "type": "folder",
+                "name": "MP3",
+                "id": "mp3",
+                "children": [ ]
             }
         ]
     }
