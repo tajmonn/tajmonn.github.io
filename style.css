@@ -93,6 +93,7 @@ html, body {
     text-align: center;
     user-select: none;
     overflow: visible;
+    z-index: 1
 }
 
 .icon,
@@ -150,34 +151,46 @@ html, body {
 .window-content h3 {
     margin-top: 10px;
     margin-bottom: 10px;
+    cursor: url("cursor/text.cur"),
+            text !important;
 }
 .window-content hr {
     border: none;
     border-top: 2px solid var(--color-dark);
     margin: 12px 0;
+    cursor: url("cursor/text.cur"),
+            text !important;
 }
 .window-content ul {
     list-style: none;
     padding-left: 0;
     margin-left: 0;
+    cursor: url("cursor/text.cur"),
+            text !important;
 }
 .window-content li {
     padding-left: -1em;
+    cursor: url("cursor/text.cur"),
+            text !important;
 }
 .window-content li::before {
     content: "• ";
     font-size: 1em;
     color: var(--color-dark);
+    cursor: url("cursor/text.cur"),
+            text !important;
 }
 .window-content p {
     margin-bottom: 20px;
+    cursor: url("cursor/text.cur"),
+            text !important;
 }
 .window-content a {
     color: var(--color-primary);
     text-decoration: underline;
     cursor: 
         url("cursor/select.cur"),
-        pointer;
+        pointer !important;
 }
 
 /* WINDOW TEXT */
@@ -214,6 +227,37 @@ html, body {
     max-width: min(860px, 86vw);
     max-height: 70vh;
     object-fit: contain;
+    cursor: 
+        url("cursor/select.cur"),
+        pointer;
+}
+
+/* background dimming */
+.image-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    cursor: 
+        url("cursor/select.cur"),
+        pointer;
+}
+
+/* style for fullscreen image */
+.image-overlay img {
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: contain;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    cursor: 
+        url("cursor/select.cur"),
+        pointer;
 }
 
 /* WINDOW FOLDER */

@@ -89,9 +89,40 @@
             },
             {
                 "type": "folder",
-                "name": "MP3",
-                "id": "mp3",
-                "children": [ ]
+                "name": "MP3D",
+                "id": "mp3d-folder",
+                "children": [ 
+                    {
+                        "type": "file",
+                        "name": "MP3D.txt",
+                        "markdown": "markdown/MP3D.md",
+                        "id": "mp3d"
+                    },
+                    {
+                        "type": "image",
+                        "name": "front.jpg",
+                        "src": "images/mp3d-front.webp",
+                        "id": "mp3d-front"
+                    },
+                    {
+                        "type": "image",
+                        "name": "side.jpg",
+                        "src": "images/mp3d-side.webp",
+                        "id": "mp3d-side"
+                    },
+                    {
+                        "type": "image",
+                        "name": "cassette-off.jpg",
+                        "src": "images/mp3d-cassette-off.webp",
+                        "id": "mp3d-cassette-off"
+                    },
+                    {
+                        "type": "image",
+                        "name": "inside.jpg",
+                        "src": "images/mp3d-inside.webp",
+                        "id": "mp3d-inside"
+                    }
+                ]
             }
         ]
     }

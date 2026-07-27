@@ -7,7 +7,8 @@
 const ICONS = {
     file: { img: "icons/text-icon.png", windowClass: "window-text" },
     folder: { img: "icons/folder-icon.png", windowClass: "window-folder" },
-    image: { img: "icons/image-icon.png", windowClass: "window-image" }
+    image: { img: "icons/image-icon.png", windowClass: "window-image" },
+    video: { img: "icons/image-icon.png", windowClass: "window-video"}
 };
 
 let zIndexCounter = 10;
@@ -85,8 +86,35 @@ function createWindow(slug, node, title) {
         const img = document.createElement("img");
         img.src = node.src;
         img.alt = node.name;
+
+        // clicking will open image in fullscreen
+        img.addEventListener("click", () => {
+            // dim background
+            const overlay = document.createElement("div");
+            overlay.className = "image-overlay";
+
+            // copy of the image fullscreen
+            const fullImg = document.createElement("img");
+            fullImg.src = node.src;
+            fullImg.alt = node.name;
+
+            overlay.appendChild(fullImg);
+            document.body.appendChild(overlay);
+
+            // close by clicking anywhere or ESC
+            const closeOverlay = () => overlay.remove();
+            overlay.addEventListener("click", closeOverlay);
+            
+            document.addEventListener("keydown", function handleEsc(e) {
+                if (e.key === "Escape") {
+                    closeOverlay();
+                    document.removeEventListener("keydown", handleEsc);
+                }
+            });
+        });
+
         content.appendChild(img);
-    }
+    } 
     // folders leave window-content empty here; children are appended into it below
 
     win.append(titleBar, content);
@@ -271,8 +299,11 @@ function loadMarkdown(section) {
         .then(response => response.text())
         .then(md => {
             md = md.replace(/\{\{AGE\}\}/g, getAge("2002-02-06"));
-            const html = marked.parse(md);
-            document.querySelector(section.selector).innerHTML = html;
+            const html = marked.parse(md, { gfm: true, breaks: true });
+            const targetEl = document.querySelector(section.selector);
+            if (targetEl) {
+                targetEl.innerHTML = html;
+            }
         })
         .catch(err => console.error(`Error loading ${section.file}:`, err));
 }
